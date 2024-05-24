@@ -1,25 +1,99 @@
-There are four parameters in our DP-ID3 algorithm:
-D - dataset that we use to train our decision tree model
-A - a set of attributes
-epsilon - privacy budget
-d - maximum depth of the decision tree
+# Privacy-Preserving Machine Learning
 
-1. Maximum Depth:
-- Accuracy: Setting a lower maximum depth may lead to less accurate models, as the tree may not capture complex relationships in the data. On the other hand, setting a very high maximum depth might result in overfitting, reducing generalization to new, unseen data.
-- Privacy: The maximum depth parameter itself does not directly affect privacy.
-- Efficiency: Deeper trees generally require more computation than shallow trees.
+## Overview
 
-2. Set of Input Attributes:
-- Accuracy: The choice of input attributes significantly impacts accuracy. Including irrelevant or noisy attributes may lead to suboptimal trees, reducing predictive performance.
-- Privacy: The inclusion of specific attributes can impact privacy. Sensitive or personally identifiable attributes may contribute to privacy risks.
-- Efficiency: The number of input attributes affects computation time. Including a large number of attributes can increase the complexity of the algorithm.
-  
-3. Privacy Budget:
-- Accuracy: A smaller privacy budget may lead to less accurate models, as the algorithm is constrained in its ability to use the data fully. However, a larger privacy budget may lead to better accuracy at the cost of increased privacy risk.
-- Privacy: The privacy budget directly controls the level of privacy protection. A smaller budget provides stronger privacy guarantees but may lead to more noisy or less accurate models.
-- Efficiency: The privacy budget parameter itself does not directly affect efficiency.
+This project focuses on implementing privacy-preserving techniques in machine learning models. The project includes various datasets, scripts for data processing, machine learning models, and utility functions. The primary aim is to ensure data privacy while maintaining the effectiveness of machine learning algorithms.
 
-4. Dataset Used to Train:
-- Accuracy: The quality and representativeness of the training dataset are crucial for accuracy. Biases or inadequacies in the dataset may lead to biased or inaccurate models.
-- Privacy: The composition of the dataset can impact privacy. If the dataset contains sensitive information or allows for re-identification, privacy risks may be higher.
-- Efficiency: The size of the dataset affects computation time. Larger datasets may require more resources for training.
+## Project Structure
+
+- **analysis.md**: Documentation and analysis of the project and datasets.
+- **breast_cancer_data_clean.csv**: Cleaned dataset for breast cancer prediction.
+- **decision_tree.py**: Implementation of a decision tree model.
+- **main.py**: Main script to run the project.
+- **mushroom_data_clean.csv**: Cleaned dataset for mushroom classification.
+- **script.sh**: Shell script to run the main script.
+- **utility.py**: Utility functions used across the project.
+- **weather_data.csv**: Dataset for weather-related predictions.
+
+## Requirements
+
+- Python 3.x
+- Pandas
+- Scikit-learn
+- NumPy
+
+## Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/MinhNguyenOH/Privacy-Preserving-Machine-Learning.git
+   cd Privacy-Preserving-Machine-Learning
+   ```
+
+2. Install the required Python packages:
+
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+### Running the Project
+
+1. Ensure you are in the project directory.
+2. Run the main script using the provided shell script:
+
+   ```sh
+   sh script.sh
+   ```
+
+### Running Individual Components
+
+- **Decision Tree Model**:
+
+  ```sh
+  python3 decision_tree.py
+  ```
+
+- **Utility Functions**:
+
+  ```sh
+  python3 utility.py
+  ```
+
+## Data
+
+### Breast Cancer Data
+
+- **File**: `breast_cancer_data_clean.csv`
+- **Description**: This dataset contains cleaned data for predicting breast cancer outcomes.
+
+### Mushroom Data
+
+- **File**: `mushroom_data_clean.csv`
+- **Description**: This dataset contains cleaned data for classifying mushrooms as edible or poisonous.
+
+### Weather Data
+
+- **File**: `weather_data.csv`
+- **Description**: This dataset contains weather-related data for various predictions.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or suggestions, feel free to open an issue or contact the project maintainer at [your.email@example.com](mailto:your.email@example.com).
+```
+
+You can now copy this content and paste it into your `README.md` file.
